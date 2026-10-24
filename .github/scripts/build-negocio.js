@@ -39,6 +39,7 @@ function cambiarSrc(nombre, src) {
   html = html.replace(re, (m, dentro) => A + dentro.replace(/src="[^"]*"/, () => `src="${esc(src)}"`) + B);
   return true;
 }
+const rel = (p) => String(p).replace(/^\/+/, '');
 const esImagen = (p) => /^[\w\-./ %()]+\.(png|jpe?g|webp|gif|svg)$/i.test(p) && !/\.\./.test(p);
 
 // 1) Titulo y subtitulo de la portada
@@ -63,9 +64,9 @@ if (direccion) entreMarcas('DIR', esc(direccion));
 // 4) Imagenes: logo y foto de portada
 const nombreNeg = txt(datos.nombre);
 const logo = txt(datos.logo);
-if (logo && esImagen(logo)) entreMarcas('LOGO', `<img src="${esc(logo)}" alt="${esc(nombreNeg)}" height="44" style="max-height:44px;width:auto;display:block;">`);
+if (logo && esImagen(logo)) entreMarcas('LOGO', `<img src="${esc(rel(logo))}" alt="${esc(nombreNeg)}" height="44" style="max-height:44px;width:auto;display:block;">`);
 const portada = txt(datos.foto_portada);
-if (portada && esImagen(portada)) cambiarSrc('HERO', portada);
+if (portada && esImagen(portada)) cambiarSrc('HERO', rel(portada));
 
 // 5) Servicios (hasta 4), con precio opcional
 const ICONOS = ['fa-star', 'fa-check-circle', 'fa-thumbs-up', 'fa-heart'];
