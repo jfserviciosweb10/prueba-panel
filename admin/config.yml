@@ -10,6 +10,8 @@ public_folder: "img/uploads"
 collections:
 
   - name: "negocio"
+    editor:
+      preview: false
     label: "Datos de mi negocio"
     description: "Acá cambiás el título y subtítulo de tu portada, tus servicios con su precio, tu horario, tus datos de contacto, tu logo y la foto de portada. Los cambios se ven en la web en un par de minutos. Los campos de traducción son opcionales: si los dejás vacíos, se traducen solos."
     files:
@@ -37,6 +39,8 @@ collections:
               - { label: "Precio (opcional)", name: "precio", widget: "string", required: false, hint: "Ej: Desde $15.000" }
               - { label: "Ícono", name: "icono", widget: "hidden", default: "fa-star" }
   - name: "posts"
+    editor:
+      preview: false
     label: "Artículos del Blog"
     folder: "blog/_posts"
     create: true
@@ -49,6 +53,8 @@ collections:
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   - name: "faq"
+    editor:
+      preview: false
     label: "Preguntas frecuentes"
     description: "Para borrar una pregunta usá el tacho de basura de la lista (tiene que quedar al menos una). Los cambios se ven en la web en un par de minutos."
     files:
@@ -66,6 +72,8 @@ collections:
               - { label: "Respuesta", name: "r", widget: "text" }
 
   - name: "menu"
+    editor:
+      preview: false
     label: "Menú / Carta"
     description: "Para borrar un item del todo, usa el tacho de basura de la lista. Para ocultarlo de la web SIN borrarlo (por ejemplo, una promo vencida que capaz reusas), apaga el interruptor Mostrar en la web de ese item. Se muestran maximo 31 items a la vez; si cargas mas, los ultimos quedan guardados pero ocultos hasta que apagues o borres alguno."
     files:
@@ -86,6 +94,8 @@ collections:
               - { label: "Mostrar en la web", name: "activo", widget: "boolean", default: true }
 
   - name: "staff"
+    editor:
+      preview: false
     label: "Equipo / Staff"
     description: "Para borrar un item del todo, usa el tacho de basura de la lista. Para ocultarlo de la web SIN borrarlo (por ejemplo, una promo vencida que capaz reusas), apaga el interruptor Mostrar en la web de ese item. Se muestran maximo 31 items a la vez; si cargas mas, los ultimos quedan guardados pero ocultos hasta que apagues o borres alguno."
     files:
@@ -105,6 +115,8 @@ collections:
               - { label: "Mostrar en la web", name: "activo", widget: "boolean", default: true }
 
   - name: "portfolio"
+    editor:
+      preview: false
     label: "Portfolio de trabajos"
     description: "Para borrar un item del todo, usa el tacho de basura de la lista. Para ocultarlo de la web SIN borrarlo (por ejemplo, una promo vencida que capaz reusas), apaga el interruptor Mostrar en la web de ese item. Se muestran maximo 31 items a la vez; si cargas mas, los ultimos quedan guardados pero ocultos hasta que apagues o borres alguno."
     files:
@@ -124,6 +136,8 @@ collections:
               - { label: "Mostrar en la web", name: "activo", widget: "boolean", default: true }
 
   - name: "promociones"
+    editor:
+      preview: false
     label: "Promociones"
     description: "Para borrar un item del todo, usa el tacho de basura de la lista. Para ocultarlo de la web SIN borrarlo (por ejemplo, una promo vencida que capaz reusas), apaga el interruptor Mostrar en la web de ese item. Se muestran maximo 31 items a la vez; si cargas mas, los ultimos quedan guardados pero ocultos hasta que apagues o borres alguno."
     files:
@@ -143,6 +157,8 @@ collections:
               - { label: "Mostrar en la web", name: "activo", widget: "boolean", default: true }
 
   - name: "horarios"
+    editor:
+      preview: false
     label: "Horarios especiales"
     description: "Para borrar un item del todo, usa el tacho de basura de la lista. Para ocultarlo de la web SIN borrarlo (por ejemplo, una promo vencida que capaz reusas), apaga el interruptor Mostrar en la web de ese item. Se muestran maximo 31 items a la vez; si cargas mas, los ultimos quedan guardados pero ocultos hasta que apagues o borres alguno."
     files:
